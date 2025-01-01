@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envoy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1> API Testing </h1>
+    
+    <!-- URL Input and Request Method -->
+    <div>
+      <label for="url">API URL:</label>
+      <input type="text" id="url" data-url placeholder="Enter API URL">
+    </div>
+
+    <div>
+      <label for="method">Request Method:</label>
+      <select id="method" data-method>
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+    </div>
+
+    <!-- Query Params -->
+    <div>
+      <label>Query Parameters:</label>
+      <ul data-query-params>
+        <!-- Add key-value pairs here -->
+      </ul>
+      <button data-add-query-param>Add Query Param</button>
+    </div>
+
+    <!-- Request Headers -->
+    <div>
+      <label>Request Headers:</label>
+      <ul data-request-headers>
+        <!-- Add headers here -->
+      </ul>
+      <button data-add-header>Add Header</button>
+    </div>
+
+    <!-- Auth Type -->
+    <div>
+      <label for="auth">Authentication:</label>
+      <select id="auth" data-auth-type>
+        <option value="">None</option>
+        <option value="API Key">API Key</option>
+        <option value="Basic Auth">Basic Auth</option>
+      </select>
+    </div>
+
+    <!-- Request Body -->
+    <div>
+      <label for="json-request-body">Request Body (JSON):</label>
+      <textarea id="json-request-body" data-json-request-body></textarea>
+    </div>
+
+    <!-- Request Timeout -->
+    <div>
+      <label for="timeout">Timeout (ms):</label>
+      <input type="number" id="timeout" data-timeout value="5000">
+    </div>
+
+    <button data-submit-form>Send Request</button>
+  </div>
+
+  <!-- Response Section -->
+  <div data-response-section class="d-none">
+    <h3>Response Details</h3>
+    <div>Status: <span data-status></span></div>
+    <div>Time: <span data-time></span> ms</div>
+    <div>Size: <span data-size></span> bytes</div>
+    <div>
+      <h4>Response Body</h4>
+      <pre data-response-body></pre>
+    </div>
+    <div>
+      <h4>Response Headers</h4>
+      <div data-response-headers></div>
+    </div>
+  </div>
+
+  <!-- History Section -->
+  <div>
+    <h3>Request History</h3>
+    <ul data-history-list></ul>
+  </div>
+
+  <!-- Saved Requests Section -->
+  <div>
+    <h3>Saved Requests</h3>
+    <ul data-saved-requests-list></ul>
+    <button data-save-request>Save Request</button>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <div>
+    <button data-dark-mode-toggle>Toggle Dark Mode</button>
+  </div>
+
+  <script src="axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

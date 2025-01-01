@@ -1,0 +1,27 @@
+{
+  "name": "envoy",
+  "version": "1.0.0",
+  "description": "A lightweight, browser-based API testing tool for developers",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api-testing",
+    "http-client",
+    "rest-client",
+    "development-tools",
+    "api-client",
+    "thunder-client",
+    "postman-alternative"
+  ],
+  "author": "Arathi Krishna",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
